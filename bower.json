@@ -1,0 +1,19 @@
+{
+  "name": "rowankrishnan.com",
+  "description": "My Fucken Website",
+  "main": "gulpfile.js",
+  "authors": [
+    "Rowan Krishnan"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

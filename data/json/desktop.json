@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "name": "Files",
+      "image": "../data/img/03-4.png"
+    },
+    {
+      "name": "Downloads",
+      "image": "../data/img/03-4.png"
+    },
+    {
+      "name": "Trash",
+      "image": "../data/img/03-4.png"
+    },
+    {
+      "name": "My Computer",
+      "image": "../data/img/03-4.png"
+    }
+  ]
+}
