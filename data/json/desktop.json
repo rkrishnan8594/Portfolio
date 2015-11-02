@@ -1,20 +1,20 @@
 {
   "items": [
     {
-      "name": "Files",
-      "image": "../data/img/03-4.png"
-    },
-    {
-      "name": "Downloads",
-      "image": "../data/img/03-4.png"
-    },
-    {
-      "name": "Trash",
-      "image": "../data/img/03-4.png"
-    },
-    {
       "name": "My Computer",
-      "image": "../data/img/03-4.png"
+      "image": "../data/img/computer.png"
+    },
+    {
+      "name": "Projects",
+      "image": "../data/img/folder.png"
+    },
+    {
+      "name": "Blog",
+      "image": "../data/img/folder.png"
+    },
+    {
+      "name": "Recycle Bin",
+      "image": "../data/img/recycle.png"
     }
   ]
 }

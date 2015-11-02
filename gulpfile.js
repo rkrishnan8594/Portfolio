@@ -43,7 +43,7 @@ gulp.task('templates', function () {
     .pipe(handlebars())
     .pipe(wrap('Handlebars.template(<%= contents %>)'))
     .pipe(declare({
-      namespace: 'MyApp.templates',
+      namespace: 'Portfolio.templates',
       noRedeclare: true,
     }))
     .pipe(concat('templates.js'))

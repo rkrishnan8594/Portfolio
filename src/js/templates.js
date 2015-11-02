@@ -1,6 +1,6 @@
-this["MyApp"] = this["MyApp"] || {};
-this["MyApp"]["templates"] = this["MyApp"]["templates"] || {};
-this["MyApp"]["templates"]["desktop"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+this["Portfolio"] = this["Portfolio"] || {};
+this["Portfolio"]["templates"] = this["Portfolio"]["templates"] || {};
+this["Portfolio"]["templates"]["desktop"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var alias1=this.lambda, alias2=this.escapeExpression;
 
   return "    <li class=\"icn\">\n      <img class=\"icn__image\" src=\""
