@@ -1,29 +1,34 @@
-function init() {
+function Desktop() {
+  this.init();
+}
+
+Desktop.prototype.init = function() {
+  var self = this;
   $.getJSON('./data/json/desktop.json', function(data) {
     var template = Portfolio.templates.desktop(data);
     $('#content').html(template);
-    bindHandlers();
+    self.bindHandlers();
   });
-}
+};
 
-function bindHandlers() {
-  //$('.icn').on('dblclick', dblclicked);
-  //$('.icn').on('click', clicked);
-  $('body').on('mousedown', '.icn', dragged);
+Desktop.prototype.bindHandlers = function() {
+  var self = this;
+  $('.icn').on('dblclick', self.dblclicked);
+  $('body').on('mousedown', '.icn', self.dragged);
   $('body').on('mouseup', function() {
     $('.draggable').removeClass('draggable');
   });
-}
+};
 
-function dblclicked() {
-  console.log('double clicked item');
-}
+Desktop.prototype.dblclicked = function() {
+  var name = $(this).find('.icn__label').html();
+  new Window(name.toLowerCase());
+};
 
-function clicked(el) {
-  $(el).hide();
-}
+Desktop.prototype.clicked = function() {
+};
 
-function dragged(e) {
+Desktop.prototype.dragged = function(e) {
   $(this).addClass('draggable').parents().on('mousemove', function(e) {
     $('.draggable').offset({
       top: e.pageY - $('.draggable').outerHeight() / 2,
@@ -33,8 +38,6 @@ function dragged(e) {
     });
   });
   e.preventDefault();
-}
+};
 
-$(document).ready(function() {
-  init();
-});
+new Desktop();

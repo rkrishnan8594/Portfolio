@@ -4,6 +4,7 @@
   "description": "My Fucken Website",
   "author": "Rowan Krishnan",
   "main": "gulpfile.js",
+  "repository": "rkrishnan8594/Portfolio",
   "dependencies": {
     "handlebars": "^2.0.0-beta.1"
   },
