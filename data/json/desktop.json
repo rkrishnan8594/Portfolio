@@ -5,6 +5,14 @@
       "image": "../data/img/computer.png"
     },
     {
+      "name": "Internet Explorer",
+      "image": "../data/img/ie.png"
+    },
+    {
+      "name": "Notepad",
+      "image": "../data/img/notepad.png"
+    },
+    {
       "name": "Projects",
       "image": "../data/img/folder.png"
     },

@@ -10,10 +10,10 @@ Window.prototype.init = function() {
     var template = Portfolio.templates.folder(data);
     self.render(template);
   });
-}
+};
 
 Window.prototype.render = function(template) {
   vex.open({
     content: template
   });
-}
+};
