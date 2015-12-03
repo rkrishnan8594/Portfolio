@@ -48,5 +48,22 @@ body {
 
 .bar__title {
   color: #FFF;
+  display: inline;
   font-size: 16px;
+}
+
+.bar__icn {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+}
+
+.bar__icn--expand {
+  margin-right: 25px;
+  margin-top: 4px;
+}
+
+.bar__icn--minimize {
+  margin-right: 1px;
+  margin-top: 5px;
 }
