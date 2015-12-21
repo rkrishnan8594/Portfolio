@@ -14,7 +14,6 @@ Taskbar.prototype.addItem = function() {
 
 Taskbar.prototype.bindHandlers = function() {
   var self = this;
-  console.log("Binding shit");
   $('.taskbar__start-btn').on('click', self.openStartMenu)
 };
 
