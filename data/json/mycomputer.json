@@ -1,0 +1,9 @@
+{
+  "name": "My Computer",
+  "items": [
+    {
+      "name": "Portfolio",
+      "type": "url"
+    }
+  ]
+}

@@ -30,7 +30,6 @@ gulp.task('watch', function () {
 gulp.task('scripts', function() {
   return gulp.src(['./node_modules/jquery/dist/jquery.min.js',
     './node_modules/handlebars/dist/handlebars.runtime.js',
-    './node_modules/vex-js/js/vex.combined.min.js',
     './src/js/templates.js',
     './src/js/*.js'
     ])

@@ -1,6 +1,6 @@
 function Desktop() {
   this.init();
-}
+};
 
 Desktop.prototype.init = function() {
   var self = this;
@@ -23,9 +23,6 @@ Desktop.prototype.bindHandlers = function() {
 Desktop.prototype.dblclicked = function() {
   var name = $(this).find('.icn__label').html();
   new Window(name.toLowerCase());
-};
-
-Desktop.prototype.clicked = function() {
 };
 
 Desktop.prototype.dragged = function(e) {
