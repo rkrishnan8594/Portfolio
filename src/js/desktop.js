@@ -26,10 +26,12 @@ Desktop.prototype.dblclicked = function() {
 };
 
 Desktop.prototype.dragged = function(e) {
+  var xOffset = e.pageX - $(this).offset().left;
+  var yOffset = e.pageY - $(this).offset().top;
   $(this).addClass('draggable').parents().on('mousemove', function(e) {
     $('.draggable').offset({
-      top: e.pageY - $('.draggable').outerHeight() / 2,
-      left: e.pageX - $('.draggable').outerWidth() / 2
+      top: e.pageY - yOffset,
+      left: e.pageX - xOffset
     }).on('mouseup', function() {
       $(this).removeClass('draggable');
     });
