@@ -9,6 +9,7 @@ Window.prototype.init = function() {
   $.getJSON(path, function(data) {
     var template = Portfolio.templates.folder(data);
     self.render(template);
+    self.win = $('.' + data.name);
     self.bindHandlers();
   });
 };
@@ -19,6 +20,11 @@ Window.prototype.render = function(template) {
 
 Window.prototype.bindHandlers = function() {
   var self = this;
+
+  this.win.find('.bar__icn--close').on('click', function() {
+    self.win.remove();
+  });
+
   $('body').on('mousedown', '.folder__bar', self.drag);
   $('body').on('mouseup', function() {
     $('.draggable').removeClass('draggable');

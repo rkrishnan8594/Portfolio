@@ -16,10 +16,12 @@ this["Portfolio"]["templates"]["desktop"] = Handlebars.template({"1":function(de
     + "</ul>\n";
 },"useData":true});
 this["Portfolio"]["templates"]["folder"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var helper;
+    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "<div class=\"folder\">\n  <div class=\"folder__bar\">\n    <p class=\"bar__title\">"
-    + this.escapeExpression(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"name","hash":{},"data":data}) : helper)))
+  return "<div class=\"folder "
+    + alias3(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"name","hash":{},"data":data}) : helper)))
+    + "\">\n  <div class=\"folder__bar\">\n    <p class=\"bar__title\">"
+    + alias3(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"name","hash":{},"data":data}) : helper)))
     + "</p>\n    <img class=\"bar__icn bar__icn--close\" src=\"../data/img/close-1.png\"/>\n    <img class=\"bar__icn bar__icn--expand\" src=\"../data/img/expand.png\"/>\n    <img class=\"bar__icn bar__icn--minimize\" src=\"../data/img/minimize.png\"/>\n  </div>\n  <div class=\"folder__items\">\n    <p></p>\n  </div>\n</div>\n";
 },"useData":true});
 this["Portfolio"]["templates"]["taskbar"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
