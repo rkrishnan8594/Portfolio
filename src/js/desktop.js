@@ -1,4 +1,5 @@
 function Desktop() {
+  this.taskbar = new Taskbar();
   this.init();
 };
 
@@ -13,16 +14,19 @@ Desktop.prototype.init = function() {
 
 Desktop.prototype.bindHandlers = function() {
   var self = this;
-  $('.icn').on('dblclick', self.dblclicked);
+  $('.icn').on('dblclick', function() {
+    self.dblclicked(this, self.taskbar);
+  });
   $('body').on('mousedown', '.icn', self.dragged);
   $('body').on('mouseup', function() {
     $('.draggable').removeClass('draggable');
   });
 };
 
-Desktop.prototype.dblclicked = function() {
-  var name = $(this).find('.icn__label').html();
-  new Window(name.toLowerCase());
+Desktop.prototype.dblclicked = function(icon, taskbar) {
+  var name = $(icon).find('.icn__label').html();
+  if(!$('.folder').hasClass(name))
+    new Window(name.toLowerCase(), taskbar);
 };
 
 Desktop.prototype.dragged = function(e) {

@@ -25,5 +25,5 @@ this["Portfolio"]["templates"]["folder"] = Handlebars.template({"compiler":[6,">
     + "</p>\n    <img class=\"bar__icn bar__icn--close\" src=\"../data/img/close-1.png\"/>\n    <img class=\"bar__icn bar__icn--expand\" src=\"../data/img/expand.png\"/>\n    <img class=\"bar__icn bar__icn--minimize\" src=\"../data/img/minimize.png\"/>\n  </div>\n  <div class=\"folder__items\">\n    <p></p>\n  </div>\n</div>\n";
 },"useData":true});
 this["Portfolio"]["templates"]["taskbar"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    return "<div class=\"taskbar__start-btn\">\n  <p class=\"start-btn__txt\">Start</p>\n</div>\n";
+    return "<div class=\"taskbar__start-btn\">\n  <p class=\"start-btn__txt\">Start</p>\n</div>\n<div class=\"taskbar__programs\">\n</div>\n";
 },"useData":true});

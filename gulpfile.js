@@ -31,7 +31,9 @@ gulp.task('scripts', function() {
   return gulp.src(['./node_modules/jquery/dist/jquery.min.js',
     './node_modules/handlebars/dist/handlebars.runtime.js',
     './src/js/templates.js',
-    './src/js/*.js'
+    './src/js/taskbar.js',
+    './src/js/window.js',
+    './src/js/desktop.js'
     ])
     .pipe(concat('site.min.js'))
     .pipe(uglify())

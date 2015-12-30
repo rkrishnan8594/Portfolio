@@ -1,5 +1,6 @@
-function Window(name) {
+function Window(name, taskbar) {
   this.name = name;
+  this.taskbar = taskbar;
   this.init();
 };
 
@@ -9,6 +10,7 @@ Window.prototype.init = function() {
   $.getJSON(path, function(data) {
     var template = Portfolio.templates.folder(data);
     self.render(template);
+    self.data = data;
     self.win = $('.' + data.name);
     self.bindHandlers();
   });
@@ -20,9 +22,13 @@ Window.prototype.render = function(template) {
 
 Window.prototype.bindHandlers = function() {
   var self = this;
-
-  this.win.find('.bar__icn--close').on('click', function() {
+  this.win.find('.bar__icn--close').click(function() {
     self.win.remove();
+    self.taskbar.removeItem(self.data);
+  });
+  this.win.find('.bar__icn--minimize').click(function() {
+    self.win.hide();
+    self.taskbar.addItem(self.data);
   });
 
   $('body').on('mousedown', '.folder__bar', self.drag);
