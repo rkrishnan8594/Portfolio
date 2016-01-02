@@ -3,14 +3,35 @@ function Taskbar() {
 };
 
 Taskbar.prototype.init = function() {
-  var template = Portfolio.templates.taskbar();
+  var template = Portfolio.templates.taskbar(this.getTime());
   $('.taskbar').html(template);
   this.bindHandlers();
 };
 
+Taskbar.prototype.getTime = function() {
+  var time = new Date();
+  var hours = time.getHours();
+  var morning;
+  if(hours > 12) {
+    hours -= 12;
+    morning = ' PM';
+  } else if(hours == 0) {
+    hours = 12;
+    morning = ' AM';
+  } else {
+    morning = ' AM';
+  }
+  var minutes = time.getMinutes();
+  time = hours + ':' + minutes + morning;
+  time = {"time": time};
+  return time;
+};
+
 Taskbar.prototype.addItem = function(item) {
-  item = "<span class='program'>" + item.name + "</span>";
-  $('.taskbar__programs').append(item);
+  if($('.program').filter(":contains(" + item.name + ")").length == 0) {
+    item = "<span class='program'>" + item.name + "</span>";
+    $('.taskbar__programs').append(item);
+  }
 };
 
 Taskbar.prototype.removeItem = function(item) {

@@ -1,0 +1,60 @@
+.taskbar {
+  background-color: #C0C0C0;
+  border-top: 1px solid #FFF;
+  height: 30px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.taskbar__start-btn {
+  border-top: 1px solid #FFF;
+  border-left: 1px solid #FFF;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+  display: inline-block;
+  height: 25px;
+  margin-left: 2px;
+  margin-top: 2px;
+  text-align: center;
+  width: 65px;
+}
+
+.start-btn__txt {
+  font-family: 'MS Sans Serif', 'Helvetica';
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 3px;
+}
+
+.taskbar__programs {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.taskbar__tray {
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  display: inline-block;
+  float: right;
+  font-family: 'Microsoft Sans Serif';
+  font-size: 14px;
+  margin-right: 2px;
+  padding: 5px 15px 5px 15px;
+  width: 130px;
+}
+
+.program {
+  cursor: pointer;
+  border-top: 1px solid #FFF;
+  border-left: 1px solid #FFF;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  font-family: 'MS Sans Serif', 'Helvetica';
+  font-size: 14px;
+  margin-right: 10px;
+  padding: 0px 15px 2px 15px;
+}

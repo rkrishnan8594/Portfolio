@@ -1,0 +1,42 @@
+.folder {
+  background-color: #FFF;
+  border: 4px solid #c2c2c2;
+  height: 300px;
+  left: 350px;
+  bottom: 500px;
+  position: relative;
+  width: 550px;
+}
+
+.folder__bar {
+  background-color: #020282;
+  height: 25px;
+  padding-left: 5px;
+  width: 100%;
+}
+
+.bar__title {
+  color: #FFF;
+  font-family: 'Microsoft Sans Serif';
+  font-size: 16px;
+}
+
+.bar__icn {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+}
+
+.bar__icn--expand {
+  margin-right: 2px;
+  margin-top: 4px;
+}
+
+.bar__icn--minimize {
+  margin-right: 1px;
+  margin-top: 5px;
+}
+
+.bar__icn--close {
+  margin-top: 5px;
+}
