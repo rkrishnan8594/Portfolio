@@ -10,6 +10,7 @@ Window.prototype.init = function() {
   $.getJSON(path, function(data) {
     var template = Portfolio.templates.folder(data);
     self.render(template);
+    self.taskbar.addItem(data);
     self.data = data;
     self.win = $('.' + data.name);
     self.bindHandlers();
@@ -28,7 +29,7 @@ Window.prototype.bindHandlers = function() {
   });
   this.win.find('.bar__icn--minimize').click(function() {
     self.win.hide();
-    self.taskbar.addItem(self.data);
+    self.taskbar.minimize(self.data);
   });
 
   $('body').on('mousedown', '.folder__bar', self.drag);

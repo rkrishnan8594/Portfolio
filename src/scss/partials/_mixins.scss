@@ -1,0 +1,13 @@
+@mixin taskbar-btn() {
+  border-top: 1px solid #FFF;
+  border-left: 1px solid #FFF;
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+@mixin taskbar-inset() {
+  border-top: 1px solid #7f7f7f;
+  border-left: 1px solid #7f7f7f;
+  border-right: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+}

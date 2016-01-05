@@ -27,7 +27,7 @@ this["Portfolio"]["templates"]["folder"] = Handlebars.template({"compiler":[6,">
 this["Portfolio"]["templates"]["taskbar"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var helper;
 
-  return "<div class=\"taskbar__start-btn\">\n  <p class=\"start-btn__txt\">Start</p>\n</div>\n<div class=\"taskbar__programs\"></div>\n<div class=\"taskbar__tray\">\n  "
+  return "<div class=\"taskbar__start-btn\">\n  <p class=\"start-btn__txt\">Start</p>\n</div>\n<div class=\"taskbar__programs\"></div>\n<div class=\"taskbar__tray\">\n  <p class=\"tray__time\">"
     + this.escapeExpression(((helper = (helper = helpers.time || (depth0 != null ? depth0.time : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0,{"name":"time","hash":{},"data":data}) : helper)))
-    + "\n</div>\n";
+    + "</p>\n</div>\n";
 },"useData":true});

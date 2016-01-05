@@ -1,4 +1,5 @@
-@import 'base';
-@import 'desktop';
-@import 'folder';
-@import 'taskbar';
+@import 'partials/base';
+@import 'partials/mixins';
+@import 'partials/desktop';
+@import 'partials/folder';
+@import 'partials/taskbar';

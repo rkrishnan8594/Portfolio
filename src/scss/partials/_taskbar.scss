@@ -1,17 +1,14 @@
 .taskbar {
   background-color: #C0C0C0;
   border-top: 1px solid #FFF;
+  bottom: 0;
   height: 30px;
   position: fixed;
-  bottom: 0;
   width: 100%;
 }
 
 .taskbar__start-btn {
-  border-top: 1px solid #FFF;
-  border-left: 1px solid #FFF;
-  border-right: 1px solid #000;
-  border-bottom: 1px solid #000;
+  @include taskbar-btn();
   cursor: pointer;
   display: inline-block;
   height: 25px;
@@ -22,7 +19,7 @@
 }
 
 .start-btn__txt {
-  font-family: 'MS Sans Serif', 'Helvetica';
+  font-family: 'Microsoft Sans Serif';
   font-size: 14px;
   font-weight: bold;
   margin-top: 3px;
@@ -31,13 +28,12 @@
 .taskbar__programs {
   display: inline-block;
   margin-left: 25px;
+  margin-top: 2px;
+  vertical-align: top;
 }
 
 .taskbar__tray {
-  border-top: 1px solid #000;
-  border-left: 1px solid #000;
-  border-right: 1px solid #FFF;
-  border-bottom: 1px solid #FFF;
+  @include taskbar-inset();
   display: inline-block;
   float: right;
   font-family: 'Microsoft Sans Serif';
@@ -47,14 +43,23 @@
   width: 130px;
 }
 
-.program {
+.taskbar__program {
+  //@include taskbar-btn();
   cursor: pointer;
-  border-top: 1px solid #FFF;
-  border-left: 1px solid #FFF;
-  border-right: 1px solid #000;
-  border-bottom: 1px solid #000;
-  font-family: 'MS Sans Serif', 'Helvetica';
+  display: inline-block;
+  font-family: 'Microsoft Sans Serif';
   font-size: 14px;
+  height: 25px;
   margin-right: 10px;
-  padding: 0px 15px 2px 15px;
+  padding: 3px 15px 2px 15px;
 }
+
+.open {
+  @include taskbar-inset();
+}
+
+.min {
+  @include taskbar-btn();
+}
+
+.tray__time { float: right; }
