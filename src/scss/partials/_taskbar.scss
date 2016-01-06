@@ -40,11 +40,10 @@
   font-size: 14px;
   margin-right: 2px;
   padding: 5px 15px 5px 15px;
-  width: 130px;
+  width: 100px;
 }
 
 .taskbar__program {
-  //@include taskbar-btn();
   cursor: pointer;
   display: inline-block;
   font-family: 'Microsoft Sans Serif';
@@ -52,6 +51,11 @@
   height: 25px;
   margin-right: 10px;
   padding: 3px 15px 2px 15px;
+}
+
+.program__icn {
+  margin-right: 5px;
+  vertical-align: middle;
 }
 
 .open {

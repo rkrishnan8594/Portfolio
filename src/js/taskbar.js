@@ -32,15 +32,14 @@ Taskbar.prototype.getTime = function() {
 
 Taskbar.prototype.addItem = function(item) {
   if($('.taskbar__program').filter(":contains(" + item.name + ")").length == 0) {
-    item = "<div class='taskbar__program open'>" + item.name + "</div>";
+    item = Portfolio.templates.taskbarItem(item);
     $('.taskbar__programs').append(item);
   }
 };
 
 Taskbar.prototype.minimize = function(item) {
   item = $('.taskbar__program').filter(":contains(" + item.name + ")")
-  item.removeClass('open');
-  item.addClass('min');
+  item.removeClass('open').addClass('min');
 }
 
 Taskbar.prototype.removeItem = function(item) {
@@ -54,7 +53,7 @@ Taskbar.prototype.bindHandlers = function() {
 };
 
 Taskbar.prototype.openWindow = function() {
-  var win = $(this).text();
+  var win = $(this).find('span').text();
   if($(this).hasClass('min')) {
     $(this).removeClass('min').addClass('open');
     $("." + win).show();

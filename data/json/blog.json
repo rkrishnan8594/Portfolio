@@ -1,5 +1,6 @@
 {
   "name": "Blog",
+  "taskbar-icn": "../data/img/folder-sm.png",
   "items": [
     {
       "name": "Portfolio",
