@@ -32,6 +32,7 @@ Window.prototype.bindHandlers = function() {
     self.taskbar.minimize(self.data);
   });
 
+  this.win.on('mousedown', self.focus);
   $('body').on('mousedown', '.folder__bar', self.drag);
   $('body').on('mouseup', function() {
     $('.draggable').removeClass('draggable');
@@ -51,4 +52,10 @@ Window.prototype.drag = function(e) {
     });
   });
   e.preventDefault();
+};
+
+Window.prototype.focus = function() {
+  $('.focused').removeClass('focused').addClass('unfocused');
+  $('.folder').addClass('unfocused');
+  $(this).removeClass('unfocused').addClass('focused');
 };

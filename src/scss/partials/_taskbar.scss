@@ -40,7 +40,7 @@
   font-size: 14px;
   margin-right: 2px;
   padding: 5px 15px 5px 15px;
-  width: 100px;
+  width: 90px;
 }
 
 .taskbar__program {
@@ -58,12 +58,8 @@
   vertical-align: middle;
 }
 
-.open {
-  @include taskbar-inset();
-}
-
-.min {
-  @include taskbar-btn();
-}
-
+.open { @include taskbar-inset(); }
+.min { @include taskbar-btn(); }
 .tray__time { float: right; }
+.focused { z-index: 100; }
+.unfocused { z-index: 0; }
