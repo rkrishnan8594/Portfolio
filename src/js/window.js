@@ -19,6 +19,8 @@ Window.prototype.init = function() {
 
 Window.prototype.render = function(template) {
   $('.desktop__icns').after(template);
+  var offset = 70 * $('.folder').length;
+  $('.desktop__icns').next().css({"bottom": 300 - offset + "px", "left": 350 + offset + "px"});
 };
 
 Window.prototype.bindHandlers = function() {
@@ -33,7 +35,7 @@ Window.prototype.bindHandlers = function() {
   });
 
   this.win.on('mousedown', self.focus);
-  $('body').on('mousedown', '.folder__bar', self.drag);
+  $('body').on('mousedown', '.folder__bar--primary', self.drag);
   $('body').on('mouseup', function() {
     $('.draggable').removeClass('draggable');
   });
@@ -58,4 +60,6 @@ Window.prototype.focus = function() {
   $('.focused').removeClass('focused').addClass('unfocused');
   $('.folder').addClass('unfocused');
   $(this).removeClass('unfocused').addClass('focused');
+  $('.unfocused').find('.folder__bar--primary').css("background-color", "#7B7B7B");
+  $('.focused').find('.folder__bar--primary').css("background-color", "#020282");
 };

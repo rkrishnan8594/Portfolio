@@ -19,7 +19,7 @@
 }
 
 .start-btn__txt {
-  font-family: 'Microsoft Sans Serif';
+  font-family: 'Verdana';
   font-size: 14px;
   font-weight: bold;
   margin-top: 3px;
@@ -36,28 +36,24 @@
   @include taskbar-inset();
   display: inline-block;
   float: right;
-  font-family: 'Microsoft Sans Serif';
+  font-family: 'Verdana';
   font-size: 14px;
   margin-right: 2px;
   padding: 5px 15px 5px 15px;
-  width: 90px;
+  width: 95px;
 }
 
 .taskbar__program {
   cursor: pointer;
   display: inline-block;
-  font-family: 'Microsoft Sans Serif';
+  font-family: 'Verdana';
   font-size: 14px;
   height: 25px;
   margin-right: 10px;
-  padding: 3px 15px 2px 15px;
+  padding: 3px 80px 2px 7px;
 }
 
-.program__icn {
-  margin-right: 5px;
-  vertical-align: middle;
-}
-
+.program__icn, .bar__icn--img { vertical-align: middle; }
 .open { @include taskbar-inset(); }
 .min { @include taskbar-btn(); }
 .tray__time { float: right; }

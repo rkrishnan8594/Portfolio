@@ -20,9 +20,11 @@ this["Portfolio"]["templates"]["folder"] = Handlebars.template({"compiler":[6,">
 
   return "<div class=\"folder "
     + alias3(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"name","hash":{},"data":data}) : helper)))
-    + "\">\n  <div class=\"folder__bar\">\n    <span class=\"bar__title\">"
+    + "\">\n  <div class=\"folder__bar--primary\">\n    <img class=\"bar__icn--img\" src=\""
+    + alias3(((helper = (helper = helpers['taskbar-icn'] || (depth0 != null ? depth0['taskbar-icn'] : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"taskbar-icn","hash":{},"data":data}) : helper)))
+    + "\"/>\n    <div class=\"bar__title\">"
     + alias3(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"name","hash":{},"data":data}) : helper)))
-    + "</span>\n    <img class=\"bar__icn bar__icn--close\" src=\"../data/img/close-1.png\"/>\n    <img class=\"bar__icn bar__icn--expand\" src=\"../data/img/expand.png\"/>\n    <img class=\"bar__icn bar__icn--minimize\" src=\"../data/img/minimize.png\"/>\n  </div>\n  <div class=\"folder__items\">\n    <p></p>\n  </div>\n</div>\n";
+    + "</div>\n    <img class=\"bar__icn bar__icn--close\" src=\"../data/img/close.png\"/>\n    <img class=\"bar__icn bar__icn--expand\" src=\"../data/img/expand.png\"/>\n    <img class=\"bar__icn bar__icn--minimize\" src=\"../data/img/minimize.png\"/>\n  </div>\n  <div class=\"folder__bar--secondary\">\n    <u>F</u>ile <u>E</u>dit <u>V</u>iew <u>H</u>elp\n  </div>\n  <div class=\"folder__items\">\n    <p></p>\n  </div>\n</div>\n";
 },"useData":true});
 this["Portfolio"]["templates"]["taskbar"] = Handlebars.template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var helper;

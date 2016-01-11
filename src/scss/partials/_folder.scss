@@ -3,22 +3,36 @@
   border: 4px solid #c2c2c2;
   height: 300px;
   left: 350px;
-  bottom: 500px;
-  position: relative;
+  bottom: 300px;
+  position: absolute;
   width: 550px;
 }
 
-.folder__bar {
+.folder__bar--primary {
   background-color: #020282;
   height: 25px;
   padding-left: 5px;
   width: 100%;
 }
 
+.folder__bar--secondary {
+  background-color: #BDBDBD;
+  cursor: default;
+  font-family: 'Verdana';
+  font-size: 12px;
+  height: 25px;
+  padding-left: 5px;
+  padding-top: 5px;
+  width: 100%;
+  word-spacing: 10px;
+}
+
 .bar__title {
   color: #FFF;
-  font-family: 'Microsoft Sans Serif';
-  font-size: 16px;
+  display: inline-block;
+  font-family: 'Verdana';
+  font-size: 14px;
+  margin-top: 4px;
 }
 
 .bar__icn {
@@ -29,7 +43,7 @@
 
 .bar__icn--expand {
   margin-right: 2px;
-  margin-top: 4px;
+  margin-top: 5px;
 }
 
 .bar__icn--minimize {
@@ -38,5 +52,6 @@
 }
 
 .bar__icn--close {
+  margin-right: 3px;
   margin-top: 5px;
 }
