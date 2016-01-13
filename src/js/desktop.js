@@ -24,9 +24,16 @@ Desktop.prototype.bindHandlers = function() {
 };
 
 Desktop.prototype.dblclicked = function(icon, taskbar) {
+  var self = this;
   var name = $(icon).find('.icn__label').html();
   if(!$('.folder').hasClass(name))
-    new Window(name.toLowerCase(), taskbar);
+    new Window(self.slugify(name), name, taskbar);
+};
+
+Desktop.prototype.slugify = function(name) {
+  name = name.toLowerCase();
+  name = name.replace(/\s/g, "-");
+  return name;
 };
 
 Desktop.prototype.dragged = function(e) {

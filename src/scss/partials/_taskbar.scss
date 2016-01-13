@@ -14,22 +14,27 @@
   height: 25px;
   margin-left: 2px;
   margin-top: 2px;
+  padding: 1px;
   text-align: center;
-  width: 65px;
+  width: 70px;
+}
+
+.start-btn__icn {
+  display: inline-block;
+  float: left;
 }
 
 .start-btn__txt {
   font-family: 'Verdana';
   font-size: 14px;
-  font-weight: bold;
-  margin-top: 3px;
+  font-weight: 550;
+  margin-top: 2px;
 }
 
 .taskbar__programs {
   display: inline-block;
   margin-left: 25px;
-  margin-top: 2px;
-  vertical-align: top;
+  vertical-align: middle;
 }
 
 .taskbar__tray {
@@ -37,8 +42,10 @@
   display: inline-block;
   float: right;
   font-family: 'Verdana';
-  font-size: 14px;
-  margin-right: 2px;
+  font-size: 12px;
+  height: 25px;
+  margin-right: 3px;
+  margin-top: 2px;
   padding: 5px 15px 5px 15px;
   width: 95px;
 }
@@ -50,7 +57,14 @@
   font-size: 14px;
   height: 25px;
   margin-right: 10px;
-  padding: 3px 80px 2px 7px;
+  margin-bottom: 3px;
+  padding: 3px 0px 2px 7px;
+  width: 200px;
+}
+
+.program__label {
+  font-size: 12px;
+  margin-left: 3px;
 }
 
 .program__icn, .bar__icn--img { vertical-align: middle; }

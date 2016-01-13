@@ -1,15 +1,30 @@
-<div class="folder {{name}}">
-  <div class="folder__bar--primary">
-    <img class="bar__icn--img" src="{{taskbar-icn}}"/>
-    <div class="bar__title">{{name}}</div>
-    <img class="bar__icn bar__icn--close" src="../data/img/close.png"/>
-    <img class="bar__icn bar__icn--expand" src="../data/img/expand.png"/>
-    <img class="bar__icn bar__icn--minimize" src="../data/img/minimize.png"/>
-  </div>
-  <div class="folder__bar--secondary">
-    <u>F</u>ile <u>E</u>dit <u>V</u>iew <u>H</u>elp
-  </div>
-  <div class="folder__items">
-    <p></p>
+<div class="folder {{slug}}">
+  <div class="folder__container">
+    <div class="folder__bar--primary">
+      <img class="bar__icn--img" src="{{taskbar-icn}}"/>
+      <div class="bar__title">{{name}}</div>
+      <img class="bar__icn bar__icn--close" src="../data/img/close.png"/>
+      <img class="bar__icn bar__icn--expand" src="../data/img/expand.png"/>
+      <img class="bar__icn bar__icn--minimize" src="../data/img/minimize.png"/>
+    </div>
+    <div class="folder__bar--secondary">
+      <u>F</u>ile <u>E</u>dit <u>V</u>iew <u>H</u>elp
+    </div>
+    {{#if notepad}}
+      <div class="folder__items--container" contenteditable></div>
+    {{else}}
+      <div class="folder__items--container">
+        <ul class="folder__items--list">
+        {{#each items}}
+          <li class="icn folder__icn">
+            <a href="{{this.url}}">
+              <img class="icn__image" src="{{this.image}}"/>
+              <p class="icn__label folder__label">{{this.name}}</p>
+            </a>
+          </li>
+        {{/each}}
+        </ul>
+      </div>
+    {{/if}}
   </div>
 </div>

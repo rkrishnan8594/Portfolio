@@ -1,9 +1,8 @@
 {
   "name": "Notepad",
+  "slug": "notepad",
+  "notepad": "true",
+  "taskbar-icn": "../data/img/notepad-sm.png",
   "items": [
-    {
-      "name": "Portfolio",
-      "type": "url"
-    }
   ]
 }

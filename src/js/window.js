@@ -1,4 +1,5 @@
-function Window(name, taskbar) {
+function Window(slug, name, taskbar) {
+  this.slug = slug;
   this.name = name;
   this.taskbar = taskbar;
   this.init();
@@ -6,13 +7,17 @@ function Window(name, taskbar) {
 
 Window.prototype.init = function() {
   var self = this;
-  var path = './data/json/' + self.name + '.json';
+  var path = './data/json/' + self.slug + '.json';
   $.getJSON(path, function(data) {
-    var template = Portfolio.templates.folder(data);
+    if(self.slug == 'internet-explorer') {
+      var template = Portfolio.templates.info(data);
+    } else {
+      var template = Portfolio.templates.folder(data);
+    }
     self.render(template);
     self.taskbar.addItem(data);
     self.data = data;
-    self.win = $('.' + data.name);
+    self.win = $('.' + data.slug);
     self.bindHandlers();
   });
 };
@@ -42,7 +47,7 @@ Window.prototype.bindHandlers = function() {
 };
 
 Window.prototype.drag = function(e) {
-  var folder = $(this).parent();
+  var folder = $(this).parents('.folder');
   var xOffset = e.pageX - $(folder).offset().left;
   var yOffset = e.pageY - $(folder).offset().top;
   $(folder).addClass('draggable').parents().on('mousemove', function(e) {

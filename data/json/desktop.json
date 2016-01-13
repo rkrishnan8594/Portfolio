@@ -2,26 +2,32 @@
   "items": [
     {
       "name": "My Computer",
+      "slug": "mycomputer",
       "image": "../data/img/computer.png"
     },
     {
+      "name": "Projects",
+      "slug": "projects",
+      "image": "../data/img/folder.png"
+    },
+    {
+      "name": "Resume",
+      "image": "../data/img/document.png",
+      "url": "../data/pdf/resume.pdf"
+    },
+    {
       "name": "Internet Explorer",
+      "slug": "ie",
       "image": "../data/img/ie.png"
     },
     {
       "name": "Notepad",
+      "slug": "notepad",
       "image": "../data/img/notepad.png"
     },
     {
-      "name": "Projects",
-      "image": "../data/img/folder.png"
-    },
-    {
-      "name": "Blog",
-      "image": "../data/img/folder.png"
-    },
-    {
       "name": "Recycle Bin",
+      "slug": "recycle",
       "image": "../data/img/recycle.png"
     }
   ]

@@ -1,0 +1,22 @@
+{
+  "name": "My Computer",
+  "slug": "my-computer",
+  "taskbar-icn": "../data/img/computer-sm.png",
+  "items": [
+    {
+      "url": "#",
+      "name": "Example #1",
+      "image": "../data/img/document.png"
+    },
+    {
+      "url": "#",
+      "name": "Example #2",
+      "image": "../data/img/webpage.png"
+    },
+    {
+      "url": "#",
+      "name": "Example #3",
+      "image": "../data/img/document.png"
+    }
+  ]
+}

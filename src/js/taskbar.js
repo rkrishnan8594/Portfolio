@@ -54,6 +54,7 @@ Taskbar.prototype.bindHandlers = function() {
 
 Taskbar.prototype.openWindow = function() {
   var win = $(this).find('span').text();
+  win = win.toLowerCase().replace(/\s/g, "-");
   if($(this).hasClass('min')) {
     $(this).removeClass('min').addClass('open');
     $("." + win).show();

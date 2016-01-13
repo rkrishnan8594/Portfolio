@@ -1,8 +1,10 @@
 <ul class="desktop__icns">
   {{#each items}}
     <li class="icn">
-      <img class="icn__image" src="{{this.image}}"/>
-      <p class="icn__label">{{this.name}}</p>
+      {{#if this.url}}<a href="{{this.url}}" target="_blank">{{/if}}
+        <img class="icn__image" src="{{this.image}}"/>
+        <p class="icn__label">{{this.name}}</p>
+      {{#if this.url}}</a>{{/if}}
     </li>
   {{/each}}
 </ul>
