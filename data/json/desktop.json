@@ -16,11 +16,6 @@
       "url": "../data/pdf/resume.pdf"
     },
     {
-      "name": "Internet Explorer",
-      "slug": "ie",
-      "image": "../data/img/ie.png"
-    },
-    {
       "name": "Notepad",
       "slug": "notepad",
       "image": "../data/img/notepad.png"

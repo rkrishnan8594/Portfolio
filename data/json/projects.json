@@ -7,6 +7,11 @@
       "url": "https://github.com/rkrishnan8594/Portfolio",
       "name": "Portfolio",
       "image": "../data/img/webpage.png"
+    },
+    {
+      "url": "https://github.com/rkrishnan8594/upvote",
+      "name": "Upvote",
+      "image": "../data/img/webpage.png"
     }
   ]
 }

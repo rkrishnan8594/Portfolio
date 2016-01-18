@@ -5,18 +5,23 @@
   "items": [
     {
       "url": "#",
-      "name": "Example #1",
-      "image": "../data/img/document.png"
+      "name": "Floppy (A:)",
+      "image": "../data/img/floppy.png"
     },
     {
       "url": "#",
-      "name": "Example #2",
-      "image": "../data/img/webpage.png"
+      "name": "(C:)",
+      "image": "../data/img/drive.png"
     },
     {
       "url": "#",
-      "name": "Example #3",
-      "image": "../data/img/document.png"
+      "name": "(D:)",
+      "image": "../data/img/drive.png"
+    },
+    {
+      "url": "#",
+      "name": "(F:)",
+      "image": "../data/img/disk.png"
     }
   ]
 }
