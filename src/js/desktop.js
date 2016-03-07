@@ -13,6 +13,18 @@ Desktop.prototype.init = function() {
 };
 
 Desktop.prototype.bindHandlers = function() {
+  if(this == window)
+    var self = this.Desktop.prototype;
+  else
+    var self = this;
+  if($(window).width() < 736) {
+    self.mobileHandlers();
+  } else {
+    self.desktopHandlers();
+  }
+};
+
+Desktop.prototype.desktopHandlers = function() {
   var self = this;
   $('.icn').on('dblclick', function() {
     self.dblclicked(this, self.taskbar);
@@ -21,12 +33,22 @@ Desktop.prototype.bindHandlers = function() {
   $('body').on('mouseup', function() {
     $('.draggable').removeClass('draggable');
   });
+  $(window).one('resize', self.bindHandlers);
+};
+
+Desktop.prototype.mobileHandlers = function() {
+  var self = this;
+  $('.icn').on('click', function() {
+    self.dblclicked(this, self.taskbar);
+  });
+  $('.folder').removeAttr('style');
+  $(window).one('resize', self.bindHandlers);
 };
 
 Desktop.prototype.dblclicked = function(icon, taskbar) {
   var self = this;
   var name = $(icon).find('.icn__label').html();
-  if(!$('.folder').hasClass(name))
+  if(!$('.folder').hasClass(self.slugify(name)))
     new Window(self.slugify(name), name, taskbar);
 };
 

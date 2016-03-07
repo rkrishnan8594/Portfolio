@@ -24,8 +24,10 @@ Window.prototype.init = function() {
 
 Window.prototype.render = function(template) {
   $('.desktop__icns').after(template);
-  var offset = 70 * $('.folder').length;
-  $('.desktop__icns').next().css({"bottom": 300 - offset + "px", "left": 350 + offset + "px"});
+  if($(window).width() > 736) {
+    var offset = 70 * $('.folder').length;
+    $('.desktop__icns').next().css({"bottom": 300 - offset + "px", "left": 350 + offset + "px"});
+  }
 };
 
 Window.prototype.bindHandlers = function() {
